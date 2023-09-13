@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Boxes</title>
+    <style>
+        /* CSS to style the container */
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack boxes vertically */
+            align-items: flex-start; /* Align boxes to the left */
+            gap: 20px; /* Gap between boxes */
+        }
+
+        /* CSS to style the square boxes */
+        .box {
+            width: 120px;
+            height: 120px;
+            background-color: var(--box-color); /* Use CSS variables to set different colors */
+            text-align: center;
+            line-height: 100px;
+            text-decoration: none; /* Remove underline from links */
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Define different colors using CSS variables */
+        .box:nth-child(1) {
+            --box-color: red;
+        }
+
+        .box:nth-child(2) {
+            --box-color: green;
+        }
+
+        .box:nth-child(3) {
+            --box-color: blue;
+        }
+
+        .box:nth-child(4) {
+            --box-color: orange;
+        }
+        .box:hover {
+            transform: scale(1.1); /* Change the background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="box" href="link1.html">Box 1</a>
+        <a class="box" href="link2.html">Box 2</a>
+        <a class="box" href="link3.html">Box 3</a>
+        <a class="box" href="link4.html">Box 4</a>
+    </div>
+</body>
+</html>
